@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Tooltip from './components/styled-components/Tooltip';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tooltip event='onMouseEnter' content="Here's my content">
+        <button>I am a button with Tooltip</button>
+      </Tooltip>
+      
+      <Tooltip  event='onFocus' content="Here's my content">
+        <input placeholder='I am a input with Tooltip onFocus'></input>
+      </Tooltip>
     </div>
   );
 }
