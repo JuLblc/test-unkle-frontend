@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { TooltipWrapper, TooltipContent } from './Tooltip.style'
+import { TooltipWrapper, TooltipContent } from './styled-components/Tooltip.style'
 
 const Tooltip = props => {
   const [active, setActive] = useState(false)
@@ -17,7 +17,7 @@ const Tooltip = props => {
   return (
     <TooltipWrapper {...displayTip}>
       {props.children}
-      {active && <TooltipContent>{props.content}</TooltipContent>}
+      {active && <TooltipContent fade='in'>{props.content}</TooltipContent>}
     </TooltipWrapper>
   )
 }

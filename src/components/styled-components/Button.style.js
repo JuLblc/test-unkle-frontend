@@ -11,5 +11,5 @@ export const StyledButton = styled.button`
     padding: 5px 15px;
     border: none;
     margin: 0 5px;
-    width: 350px;
+    width:100%;
     `;
